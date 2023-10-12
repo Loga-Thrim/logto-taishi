@@ -1,0 +1,9 @@
+export declare const validateNodeVersion: () => void;
+export declare const inquireInstallPath: (initialPath?: string) => Promise<string>;
+export declare const validateDatabase: () => Promise<void>;
+export declare const downloadRelease: (url?: string) => Promise<string>;
+export declare const decompress: (toPath: string, tarPath: string) => Promise<void>;
+export declare const seedDatabase: (instancePath: string, cloud: boolean) => Promise<void>;
+export declare const createEnv: (installPath: string, databaseUrl: string) => Promise<void>;
+export declare const logFinale: (installPath: string) => void;
+export declare const isUrl: (string: string) => boolean;

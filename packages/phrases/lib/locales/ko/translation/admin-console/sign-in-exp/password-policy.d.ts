@@ -1,0 +1,22 @@
+declare const _default: Readonly<{
+    password_requirements: string;
+    minimum_length: string;
+    minimum_length_description: string;
+    minimum_length_error: string;
+    minimum_required_char_types: string;
+    minimum_required_char_types_description: string;
+    password_rejection: string;
+    compromised_passwords: string;
+    breached_passwords: string;
+    breached_passwords_description: string;
+    restricted_phrases: string;
+    restricted_phrases_tooltip: string;
+    repetitive_or_sequential_characters: string;
+    repetitive_or_sequential_characters_description: string;
+    user_information: string;
+    user_information_description: string;
+    custom_words: string;
+    custom_words_description: string;
+    custom_words_placeholder: string;
+}>;
+export default _default;

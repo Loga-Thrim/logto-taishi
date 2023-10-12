@@ -1,0 +1,61 @@
+import type { FormEventHandler, KeyboardEventHandler } from 'react';
+import { useState } from 'react';
+
+import SearchIcon from '@/assets/icons/search.svg';
+
+import Button from '../Button';
+import TextInput from '../TextInput';
+
+import * as styles from './index.module.scss';
+
+type Props = {
+  defaultValue?: string;
+  isClearable?: boolean;
+  placeholder?: string;
+  inputClassName?: string;
+  onSearch?: (value: string) => void;
+  onClearSearch?: () => void;
+};
+
+function Search({
+  defaultValue = '',
+  isClearable = false,
+  placeholder,
+  inputClassName,
+  onSearch,
+  onClearSearch,
+}: Props) {
+  const [inputValue, setInputValue] = useState<string>(defaultValue);
+  const handleSearchKeyPress: KeyboardEventHandler<HTMLInputElement> = (event) => {
+    if (event.key === 'Enter' && inputValue) {
+      onSearch?.(inputValue);
+    }
+  };
+
+  const handleSearchChange: FormEventHandler<HTMLInputElement> = (event) => {
+    setInputValue(event.currentTarget.value);
+  };
+
+  const handleClick = () => {
+    onSearch?.(inputValue);
+  };
+
+  return (
+    <div className={styles.search}>
+      <TextInput
+        className={inputClassName}
+        value={inputValue}
+        icon={<SearchIcon className={styles.searchIcon} />}
+        placeholder={placeholder}
+        onChange={handleSearchChange}
+        onKeyPress={handleSearchKeyPress}
+      />
+      <Button title="general.search" onClick={handleClick} />
+      {isClearable && (
+        <Button size="small" type="text" title="general.clear_result" onClick={onClearSearch} />
+      )}
+    </div>
+  );
+}
+
+export default Search;

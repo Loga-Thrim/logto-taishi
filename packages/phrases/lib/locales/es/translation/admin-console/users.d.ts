@@ -1,0 +1,24 @@
+declare const _default: Readonly<{
+    page_title: string;
+    title: string;
+    subtitle: string;
+    create: string;
+    create_subtitle: string;
+    error_missing_identifier: string;
+    user_name: string;
+    application_name: string;
+    latest_sign_in: string;
+    create_form_username: string;
+    create_form_password: string;
+    create_form_name: string;
+    placeholder_name: string;
+    placeholder_email: string;
+    placeholder_username: string;
+    placeholder_phone: string;
+    unnamed: string;
+    search: string;
+    check_user_detail: string;
+    placeholder_title: string;
+    placeholder_description: string;
+}>;
+export default _default;

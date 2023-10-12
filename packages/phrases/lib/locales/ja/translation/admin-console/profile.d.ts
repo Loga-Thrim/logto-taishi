@@ -1,0 +1,72 @@
+declare const _default: Readonly<{
+    page_title: string;
+    title: string;
+    description: string;
+    settings: {
+        title: string;
+        profile_information: string;
+        avatar: string;
+        name: string;
+        username: string;
+    };
+    link_account: {
+        title: string;
+        email_sign_in: string;
+        email: string;
+        social_sign_in: string;
+        link_email: string;
+        link_email_subtitle: string;
+        email_required: string;
+        invalid_email: string;
+        identical_email_address: string;
+        anonymous: string;
+    };
+    password: {
+        title: string;
+        password: string;
+        password_setting: string;
+        new_password: string;
+        confirm_password: string;
+        enter_password: string;
+        enter_password_subtitle: string;
+        set_password: string;
+        verify_via_password: string;
+        show_password: string;
+        required: string;
+        do_not_match: string;
+    };
+    code: {
+        enter_verification_code: string;
+        enter_verification_code_subtitle: string;
+        verify_via_code: string;
+        resend: string;
+        resend_countdown: string;
+    };
+    delete_account: {
+        title: string;
+        label: string;
+        description: string;
+        button: string;
+        dialog_paragraph_1: string;
+        dialog_paragraph_2: string;
+        dialog_paragraph_3: string;
+    };
+    set: string;
+    change: string;
+    link: string;
+    unlink: string;
+    not_set: string;
+    change_avatar: string;
+    change_name: string;
+    change_username: string;
+    set_name: string;
+    email_changed: string;
+    password_changed: string;
+    updated: string;
+    linked: string;
+    unlinked: string;
+    email_exists_reminder: string;
+    unlink_confirm_text: string;
+    unlink_reminder: string;
+}>;
+export default _default;

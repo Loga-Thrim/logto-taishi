@@ -1,0 +1,25 @@
+declare const _default: Readonly<{
+    title: string;
+    description: string;
+    factors: string;
+    multi_factors: string;
+    multi_factors_description: string;
+    totp: string;
+    otp_description: string;
+    webauthn: string;
+    webauthn_description: string;
+    backup_code: string;
+    backup_code_description: string;
+    backup_code_setup_hint: string;
+    backup_code_error_hint: string;
+    policy: string;
+    two_step_sign_in_policy: string;
+    two_step_sign_in_policy_description: string;
+    user_controlled: string;
+    user_controlled_description: string;
+    mandatory: string;
+    mandatory_description: string;
+    unlock_reminder: string;
+    view_plans: string;
+}>;
+export default _default;

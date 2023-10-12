@@ -1,0 +1,77 @@
+declare const _default: Readonly<{
+    page_title: string;
+    title: string;
+    subtitle: string;
+    create: string;
+    config_sie_notice: string;
+    config_sie_link_text: string;
+    tab_email_sms: string;
+    tab_social: string;
+    connector_name: string;
+    demo_tip: string;
+    social_demo_tip: string;
+    connector_type: string;
+    connector_status: string;
+    connector_status_in_use: string;
+    connector_status_not_in_use: string;
+    not_in_use_tip: {
+        content: string;
+        go_to_sie: string;
+    };
+    placeholder_title: string;
+    placeholder_description: string;
+    save_and_done: string;
+    type: {
+        email: string;
+        sms: string;
+        social: string;
+    };
+    setup_title: {
+        email: string;
+        sms: string;
+        social: string;
+    };
+    guide: {
+        subtitle: string;
+        general_setting: string;
+        parameter_configuration: string;
+        test_connection: string;
+        name: string;
+        name_placeholder: string;
+        name_tip: string;
+        logo: string;
+        logo_placeholder: string;
+        logo_tip: string;
+        logo_dark: string;
+        logo_dark_placeholder: string;
+        logo_dark_tip: string;
+        logo_dark_collapse: string;
+        logo_dark_show: string;
+        target: string;
+        target_placeholder: string;
+        target_tip: string;
+        target_tip_standard: string;
+        target_tooltip: string;
+        target_conflict: string;
+        target_conflict_line2: string;
+        target_conflict_line3: string;
+        config: string;
+        sync_profile: string;
+        sync_profile_only_at_sign_up: string;
+        sync_profile_each_sign_in: string;
+        sync_profile_tip: string;
+        callback_uri: string;
+        callback_uri_description: string;
+    };
+    platform: {
+        universal: string;
+        web: string;
+        native: string;
+    };
+    add_multi_platform: string;
+    drawer_title: string;
+    drawer_subtitle: string;
+    unknown: string;
+    standard_connectors: string;
+}>;
+export default _default;

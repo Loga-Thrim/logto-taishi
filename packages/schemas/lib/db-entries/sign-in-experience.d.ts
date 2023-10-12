@@ -1,0 +1,37 @@
+import { Color, Branding, LanguageInfo, SignIn, SignUp, ConnectorTargets, CustomContent, PartialPasswordPolicy, Mfa, GeneratedSchema } from './../foundations/index.js';
+import { SignInMode } from './custom-types.js';
+export type CreateSignInExperience = {
+    tenantId?: string;
+    id: string;
+    color: Color;
+    branding: Branding;
+    languageInfo: LanguageInfo;
+    termsOfUseUrl?: string | null;
+    privacyPolicyUrl?: string | null;
+    signIn: SignIn;
+    signUp: SignUp;
+    socialSignInConnectorTargets?: ConnectorTargets;
+    signInMode?: SignInMode;
+    customCss?: string | null;
+    customContent?: CustomContent;
+    passwordPolicy?: PartialPasswordPolicy;
+    mfa?: Mfa;
+};
+export type SignInExperience = {
+    tenantId: string;
+    id: string;
+    color: Color;
+    branding: Branding;
+    languageInfo: LanguageInfo;
+    termsOfUseUrl: string | null;
+    privacyPolicyUrl: string | null;
+    signIn: SignIn;
+    signUp: SignUp;
+    socialSignInConnectorTargets: ConnectorTargets;
+    signInMode: SignInMode;
+    customCss: string | null;
+    customContent: CustomContent;
+    passwordPolicy: PartialPasswordPolicy;
+    mfa: Mfa;
+};
+export declare const SignInExperiences: GeneratedSchema<CreateSignInExperience, SignInExperience>;

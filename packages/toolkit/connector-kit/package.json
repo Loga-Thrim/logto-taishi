@@ -1,0 +1,70 @@
+{
+  "name": "@logto/connector-kit",
+  "version": "1.1.1",
+  "author": "Silverhand Inc. <contact@silverhand.io>",
+  "homepage": "https://github.com/logto-io/toolkit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logto-io/toolkit.git"
+  },
+  "license": "MPL-2.0",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js",
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "precommit": "lint-staged",
+    "dev": "tsc --watch --preserveWatchOutput --incremental",
+    "build": "rimraf lib/ && tsc",
+    "build:test": "pnpm build",
+    "lint": "eslint --ext .ts src",
+    "lint:report": "pnpm lint --format json --output-file report.json",
+    "prepack": "pnpm build",
+    "test:only": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "test": "pnpm build:test && pnpm test:only",
+    "test:ci": "pnpm test:only",
+    "test:coverage": "pnpm test:only --silent --coverage"
+  },
+  "dependencies": {
+    "@logto/language-kit": "workspace:^1.0.0",
+    "@silverhand/essentials": "^2.8.4",
+    "@withtyped/client": "^0.7.22"
+  },
+  "optionalDependencies": {
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "@logto/cloud": "0.2.5-a3e852f",
+    "@jest/types": "^29.0.3",
+    "@silverhand/eslint-config": "4.0.1",
+    "@silverhand/ts-config": "4.0.0",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.11.18",
+    "eslint": "^8.44.0",
+    "jest": "^29.5.0",
+    "lint-staged": "^14.0.0",
+    "prettier": "^3.0.0",
+    "tslib": "^2.4.1",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": "^18.12.0"
+  },
+  "eslintConfig": {
+    "extends": "@silverhand"
+  },
+  "prettier": "@silverhand/eslint-config/.prettierrc",
+  "publishConfig": {
+    "access": "public"
+  }
+}

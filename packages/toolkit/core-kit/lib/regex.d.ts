@@ -1,0 +1,9 @@
+export declare const emailRegEx: RegExp;
+export declare const phoneRegEx: RegExp;
+export declare const phoneInputRegEx: RegExp;
+export declare const usernameRegEx: RegExp;
+export declare const webRedirectUriProtocolRegEx: RegExp;
+export declare const mobileUriSchemeProtocolRegEx: RegExp;
+export declare const hexColorRegEx: RegExp;
+export declare const dateRegex: RegExp;
+export declare const noSpaceRegEx: RegExp;
